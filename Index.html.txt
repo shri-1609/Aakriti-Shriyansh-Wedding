@@ -1,0 +1,424 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#541e2b">
+<title>Aakriti & Shriyansh | Wedding Invitation</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #652b36;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fff8ed;
+}
+
+.hero {
+  min-height: 100svh;
+  padding: 55px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(#541e2bc9, #541e2bc9),
+    url("assets/background.jpg") center/cover;
+  color: #ffe9b0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ornament {
+  font-size: 42px;
+}
+
+h1 {
+  font-size: clamp(38px, 10vw, 58px);
+  margin: 16px 0;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 29px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+button,
+.btn {
+  display: inline-block;
+  border: 1px solid #e5c47c;
+  background: #e5c47c;
+  color: #541e2b;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 8px;
+  font-family: inherit;
+}
+
+button:active,
+.btn:active {
+  transform: scale(.97);
+}
+
+section {
+  padding: 55px 20px;
+}
+
+.card {
+  max-width: 440px;
+  margin: 22px auto;
+  padding: 25px 18px;
+  border: 1px solid #d9b779;
+  border-radius: 150px 150px 15px 15px;
+  background: #fffdf7;
+  box-shadow: 0 8px 28px #652b3610;
+}
+
+.couple {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: 360px;
+  margin: 0 auto;
+  border-radius: 140px 140px 10px 10px;
+  border: 4px solid #e5c47c;
+  object-fit: cover;
+}
+
+.names {
+  font-size: 34px;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+
+.date {
+  font-size: 22px;
+  color: #a36b38;
+}
+
+.divider {
+  color: #bb8c43;
+  font-size: 25px;
+  margin: 20px;
+}
+
+#countdown {
+  font-size: 20px;
+  line-height: 2;
+}
+
+.event-card {
+  max-width: 440px;
+  margin: 22px auto;
+  padding: 30px 18px;
+  border: 1px solid #d9b779;
+  border-radius: 20px;
+  background: #fffdf7;
+}
+
+.fade {
+  animation: appear 1.6s ease both;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.petal {
+  position: absolute;
+  top: -30px;
+  color: #ffe9b0;
+  opacity: .75;
+  pointer-events: none;
+  animation: fall 9s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-30px) rotate(0deg);
+    opacity: 0;
+  }
+  15% { opacity: .75; }
+  100% {
+    transform: translateY(105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  padding: 30px 20px;
+  background: #541e2b;
+  color: #ffe9b0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop preload="auto">
+  <source src="assets/wedding-song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Opening Screen -->
+<div class="hero" id="hero">
+
+  <div class="ornament">❦</div>
+  <p>A BEAUTIFUL BEGINNING</p>
+
+  <h1 class="fade">Shubh Vivah</h1>
+
+  <div class="divider">✦ ❦ ✦</div>
+
+  <p>Two hearts, one beautiful journey</p>
+
+  <h2>Aakriti & Shriyansh</h2>
+
+  <button id="openBtn">
+    Open Our Invitation 💌
+  </button>
+
+  <p style="font-size:13px">
+    With love and blessings from our families
+  </p>
+
+</div>
+
+<!-- Invitation: Only One Couple Photo -->
+<section id="invitation">
+
+  <div class="ornament">❦</div>
+
+  <p>TOGETHER WITH OUR FAMILIES</p>
+
+  <h2>We invite you to celebrate</h2>
+
+  <div class="card">
+
+    <img
+      class="couple"
+      src="assets/couple.jpg"
+      alt="Aakriti and Shriyansh"
+    >
+
+    <div class="names">
+      Aakriti<br>
+      <span style="color:#bb8c43">&</span><br>
+      Shriyansh
+    </div>
+
+    <div class="divider">❦</div>
+
+    <p>ARE TYING THE KNOT</p>
+
+    <div class="date">5 December 2026</div>
+
+    <p>
+      With love, laughter and forever
+    </p>
+
+  </div>
+</section>
+
+<!-- Countdown -->
+<section style="background:#f7ead6">
+
+  <div class="ornament">✧</div>
+
+  <h2>Save the Date</h2>
+
+  <p>Our forever begins in</p>
+
+  <div id="countdown" aria-live="polite">
+    Loading countdown...
+  </div>
+
+</section>
+
+<!-- Only Wedding Ceremony -->
+<section id="wedding">
+
+  <div class="ornament">❦</div>
+
+  <h2>Wedding Ceremony</h2>
+
+  <div class="event-card">
+
+    <div style="font-size:42px">💍</div>
+
+    <h3>Aakriti & Shriyansh</h3>
+
+    <p class="date">5 December 2026</p>
+
+    <p><strong>Time: 8:00 PM</strong></p>
+
+    <div class="divider">✦ ❦ ✦</div>
+
+    <p>
+      Ayodhya Lawn,<br>
+      MaCrobertganj, Khalasi Line,<br>
+      Kanpur, Uttar Pradesh
+    </p>
+
+    <a
+      class="btn"
+      href="https://www.google.com/maps/search/?api=1&query=Ayodhya+Lawn+Macrobertganj+Khalasi+Line+Kanpur+Uttar+Pradesh"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      View Venue on Google Maps 📍
+    </a>
+
+  </div>
+</section>
+
+<!-- Invitation Wishes -->
+<section style="background:#f7ead6">
+
+  <h2>Join Our Celebration</h2>
+
+  <p>
+    Your presence will make our special day
+    even more memorable.
+  </p>
+
+  <a
+    class="btn"
+    href="https://wa.me/?text=You%20are%20invited%20to%20the%20wedding%20of%20Aakriti%20%26%20Shriyansh%20on%205%20December%202026%20at%208%3A00%20PM%20at%20Ayodhya%20Lawn%2C%20Kanpur."
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Share Invitation ❤️
+  </a>
+
+</section>
+
+<footer>
+
+  <div class="ornament">❦</div>
+
+  <p>Made with love</p>
+
+  <p>Aakriti & Shriyansh</p>
+
+  <button id="musicBtn">
+    🎵 Play Music
+  </button>
+
+</footer>
+
+<script>
+const music = document.getElementById("music");
+const openBtn = document.getElementById("openBtn");
+const musicBtn = document.getElementById("musicBtn");
+
+function updateMusicButton() {
+  musicBtn.textContent = music.paused
+    ? "🎵 Play Music"
+    : "⏸ Pause Music";
+}
+
+openBtn.addEventListener("click", async () => {
+  document.getElementById("invitation").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  try {
+    await music.play();
+  } catch (error) {
+    // The guest can start music using the music button.
+  }
+
+  updateMusicButton();
+});
+
+musicBtn.addEventListener("click", async () => {
+  if (music.paused) {
+    try {
+      await music.play();
+    } catch (error) {
+      alert("Please check that the music file is uploaded correctly.");
+    }
+  } else {
+    music.pause();
+  }
+
+  updateMusicButton();
+});
+
+music.addEventListener("play", updateMusicButton);
+music.addEventListener("pause", updateMusicButton);
+
+// Wedding date and time in Indian Standard Time.
+const weddingDate = new Date("2026-12-05T20:00:00+05:30");
+
+function updateCountdown() {
+  const now = Date.now();
+  const diff = weddingDate.getTime() - now;
+  const el = document.getElementById("countdown");
+
+  if (diff <= 0) {
+    el.textContent = "The celebration day is here! ❤️";
+    return;
+  }
+
+  const days = Math.floor(diff / 86400000);
+  const hours = Math.floor(diff / 3600000) % 24;
+  const mins = Math.floor(diff / 60000) % 60;
+  const secs = Math.floor(diff / 1000) % 60;
+
+  el.textContent =
+    `${days} Days · ${hours} Hours · ${mins} Min · ${secs} Sec`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Subtle falling floral symbols on the opening screen.
+const hero = document.getElementById("hero");
+
+for (let i = 0; i < 12; i++) {
+  const petal = document.createElement("span");
+  petal.className = "petal";
+  petal.textContent = "✿";
+  petal.style.left = (Math.random() * 100) + "%";
+  petal.style.animationDelay = (Math.random() * 8) + "s";
+  petal.style.animationDuration = (7 + Math.random() * 6) + "s";
+  petal.style.fontSize = (12 + Math.random() * 15) + "px";
+  hero.appendChild(petal);
+}
+</script>
+
+</body>
+</html>
